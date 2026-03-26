@@ -324,7 +324,7 @@
 
         .topic-info { flex: 1; min-width: 0; }
         .topic-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-        .topic-summary-preview { font-size: 13px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .topic-summary-preview { font-size: 13px; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
         .topic-meta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 
@@ -344,6 +344,7 @@
 
         .expand-icon { color: var(--text-muted); transition: transform 0.2s; font-size: 20px; }
         .topic-card.expanded .expand-icon { transform: rotate(180deg); }
+        .topic-card.expanded .topic-summary-preview { -webkit-line-clamp: unset; }
 
         .topic-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
         .topic-card.expanded .topic-content { max-height: 5000px; }
@@ -1415,9 +1416,7 @@
                     <div class="topic-rank rank-1">1</div>
                     <div class="topic-info">
                         <div class="topic-title">美伊15項停火協議草案曝光，油價回落股市反彈</div>
-                        <div class="topic-summary-preview">• 美方遞交15項停火協議，提議以解除制裁換取伊朗拆除核設施 
-• 儘管伊朗官方拒絕提案，市場仍對中東局勢降溫抱持高度期待 
-• 停火曙光提振市場風險偏好，成功扭轉近期股跌油漲的單邊趨勢 ...</div>
+                        <div class="topic-summary-preview">美國透過巴基斯坦向伊朗遞交15項停火協議草案。儘管伊朗官方表態強硬，但市場對中東局勢降溫抱有期望，促使油價跌破100美元，美股強勢反彈。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score high">85/100</div>
@@ -1539,9 +1538,7 @@
                     <div class="topic-rank rank-2">2</div>
                     <div class="topic-info">
                         <div class="topic-title">Meta與Google在社交媒體成癮案中敗訴，面臨巨額賠償</div>
-                        <div class="topic-summary-preview">• 陪審團裁定Meta與Google需為平台成癮設計賠償600萬美元。
-• 原告律師成功針對「產品設計」提告，避開了第230條免責條款。
-• 兩大巨頭接連敗訴，此案將成為未來數千起相關訴訟...</div>
+                        <div class="topic-summary-preview">洛杉磯陪審團裁定Meta與Google (YouTube) 需為其產品設計導致青少年社交媒體成癮負責，並賠償600萬美元。此標誌性判決可能引發骨牌效應。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score high">85/100</div>
@@ -1638,9 +1635,7 @@
                     <div class="topic-rank rank-3">3</div>
                     <div class="topic-info">
                         <div class="topic-title">迪士尼取消OpenAI合作，Sora視頻生成器全面關停</div>
-                        <div class="topic-summary-preview">• OpenAI宣布關停Sora，終止與迪士尼（Disney）為期三年的合作協議。
-• 該合作原包含10億美元投資，計畫用迪士尼角色生成AI短影音。
-• 此舉反映生成式AI影片在內容控制與...</div>
+                        <div class="topic-summary-preview">OpenAI宣布關停視頻生成器Sora，導致其與迪士尼高達10億美元的版權與股權合作協議告吹。這反映了AI視頻在版權與變現上面臨巨大挑戰。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score medium">75/100</div>
@@ -1734,9 +1729,7 @@
                     <div class="topic-rank rank-other">4</div>
                     <div class="topic-info">
                         <div class="topic-title">Intel與AMD因AI需求強勁上調CPU價格15%</div>
-                        <div class="topic-summary-preview">• Intel與AMD因AI需求擠壓產能，調漲CPU價格10%至15%。 
-• CPU交貨時間大幅延長，從原先的1至2週暴增至8至12週。 
-• 戴爾（Dell）與惠普（HP）等PC...</div>
+                        <div class="topic-summary-preview">受AI需求擠壓產能影響，Intel與AMD通知客戶將於3、4月起將CPU價格上調10%至15%。交貨時間大幅延長，帶動兩家公司股價大漲。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score medium">70/100</div>
@@ -1868,9 +1861,7 @@
                     <div class="topic-rank rank-other">5</div>
                     <div class="topic-info">
                         <div class="topic-title">SpaceX擬最快本週提交750億美元IPO申請</div>
-                        <div class="topic-summary-preview">• SpaceX 最快於本週或下週向美國證券交易委員會（SEC）提交 IPO 申請。
-• 此次 IPO 計畫籌集超過 750 億美元資金，有望創下歷史新高。
-• 散戶投資者的認購比例...</div>
+                        <div class="topic-summary-preview">馬斯克旗下的SpaceX據報最快於本週向SEC提交IPO招股書，計劃籌集超過750億美元資金。此舉引發了市場對商業航天板塊的狂熱追捧。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score medium">68/100</div>
@@ -1979,9 +1970,7 @@
                     <div class="topic-rank rank-other">6</div>
                     <div class="topic-info">
                         <div class="topic-title">中國監管出手整頓外賣價格戰，美團及電商股大漲</div>
-                        <div class="topic-summary-preview">• 中國市場監管總局與官媒發聲，要求停止外賣行業的惡性價格戰。
-• 政策重心轉向恢復市場紀律與保護企業利潤，結束長期補貼戰。
-• 監管出手刺激美團及阿里巴巴等電商巨頭股價大幅上漲。[...</div>
+                        <div class="topic-summary-preview">中國市場監管總局召開座談會並透過官媒發聲，要求停止外賣行業的惡性價格戰。政策轉向利潤保護，刺激美團股價飆升14%。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score medium">65/100</div>
@@ -2076,9 +2065,7 @@
                     <div class="topic-rank rank-other">7</div>
                     <div class="topic-info">
                         <div class="topic-title">Arm發布AGI CPU後股價暴漲，預期帶來百億營收</div>
-                        <div class="topic-summary-preview">• Arm推出專為代理式AI（Agentic AI）設計的AGI CPU，進軍自研晶片市場。
-• 商業模式從傳統IP授權轉向直接銷售晶片，大幅提升單顆晶片毛利。
-• 執行長預期新業務將在五...</div>
+                        <div class="topic-summary-preview">Arm宣布推出專為Agentic AI設計的AGI CPU，標誌著其從授權模式轉向直接銷售芯片。CEO預計該業務將在五年內帶來150億美元年收入，刺激股價暴漲。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score medium">60/100</div>
@@ -2224,10 +2211,7 @@
                     <div class="topic-rank rank-other">8</div>
                     <div class="topic-info">
                         <div class="topic-title">美國FCC以國安為由全面封殺中國製消費級路由器</div>
-                        <div class="topic-summary-preview">• 美國聯邦通信委員會（FCC）禁售新款外國製路由器。
-• 禁令僅針對新款設備，現有已使用的路由器不受影響。
-• 官方指控設備存資安漏洞，曾遭駭客用於間諜活動。
-• 德州已起訴具中資...</div>
+                        <div class="topic-summary-preview">美國聯邦通信委員會(FCC)宣布禁止進口所有新款外國（主要為中國）製造的消費級互聯網路由器，理由是防範網絡攻擊及保護關鍵基礎設施。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score medium">60/100</div>
@@ -2321,9 +2305,7 @@
                     <div class="topic-rank rank-other">9</div>
                     <div class="topic-info">
                         <div class="topic-title">本田與索尼因成本壓力終止Afeela電動車項目</div>
-                        <div class="topic-summary-preview">• 本田與索尼宣布立即終止第一代與第二代Afeela電動車開發。
-• 面臨高達2.5兆日圓的成本警告，雙方正重新評估合資策略。
-• 項目面臨進場晚、經銷商抵制直銷及美國取消補貼等逆風。[2...</div>
+                        <div class="topic-summary-preview">面對高昂的開發成本及電動車市場需求放緩，本田與索尼宣布全面終止其合資開發的Afeela電動車項目，凸顯跨界造車面臨的巨大挑戰。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score low">55/100</div>
@@ -2413,9 +2395,7 @@
                     <div class="topic-rank rank-other">10</div>
                     <div class="topic-info">
                         <div class="topic-title">SK海力士申請發行美國ADR以擴大AI內存融資</div>
-                        <div class="topic-summary-preview">• SK海力士已向美國SEC秘密提交發行ADR申請，預計下半年掛牌。
-• 赴美上市旨在擴大融資管道，以滿足AI記憶體晶片的龐大需求。
-• 擬投資逾100兆韓元擴產，包含採購設備與建設半導體...</div>
+                        <div class="topic-summary-preview">受惠於Nvidia AI芯片需求，SK海力士今年股價大漲逾50%。公司宣布已向SEC秘密提交發行美國存託憑證(ADR)的申請，以擴大全球融資渠道。</div>
                     </div>
                     <div class="topic-meta">
                         <div class="heat-score low">55/100</div>
